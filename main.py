@@ -182,10 +182,10 @@ A5: Складiть усi пункти до цього моменту в оди�
 
 # A5: GLV множення
 def glv_multiplication(alpha, P, w=4):
-    # omega = find_omega()
-    # lam = find_lambda(omega, P)
-    omega = 0x5bf3adda19e9b27bc1d99b7c07f3d6f0eb3af00adb22a5a0f44fdb2e5bd1e10
-    lam = 0x30644e72e131a029b85045b68181585d286c31cf5cf5d3ed
+    omega = find_omega()
+    lam = find_lambda(omega, P)
+    #omega = 0x5bf3adda19e9b27bc1d99b7c07f3d6f0eb3af00adb22a5a0f44fdb2e5bd1e10
+    #lam = 0x30644e72e131a029b85045b68181585d286c31cf5cf5d3ed
     if lam is None:
         raise ValueError("λ не знайдено")
     phiP = (omega * P[0] % p, P[1])
